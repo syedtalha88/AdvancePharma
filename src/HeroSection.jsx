@@ -2,21 +2,24 @@
 import styled from 'styled-components';
 import mainImage from './assets/pic2.jpg'; // replace with your main image path
 import overlayImage from './assets/pic1.jpg'; // replace with overlay image path
+
+
 const HeroSection = () => {
     return (
       <HeroContainer>
         <TextContent>
           <Subtitle>Welcome to Dental Centrum Nordwest</Subtitle>
-          <Title>Where Everyone Walks Out with a Great Smile</Title>
+          <Title>Where Everyone  <br /> Walks Out with a  <br />Great Smile</Title>
+          <Space> <h1>_____________</h1></Space>
           <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />eiusmod tempor incididunt ut labore et dolore.
           </Description>
           <ServiceSelector>
             <select>
               <option>Select a Service</option>
               {/* Additional options */}
             </select>
-            <BookButton>Book an Appointment</BookButton>
+            <BookButton>Book an Appointment  </BookButton>
           </ServiceSelector>
         </TextContent>
         <ImageWrapper>
@@ -38,6 +41,7 @@ const HeroSection = () => {
     align-items: center;
     padding: 2rem;
     text-align: center;
+    height: 80vh;
   
     @media (min-width: 768px) {
       flex-direction: row;
@@ -48,44 +52,57 @@ const HeroSection = () => {
   
   const TextContent = styled.div`
     flex: 1;
-    padding: 1rem;
+    padding: 4rem;
     width:30%;
+    background-color:;
   `;
   
   const Subtitle = styled.h2`
-    font-size: 1rem;
-    color: #006A67;
+    font-size: 0.6rem;
+    color: #7b3f00;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
-  `;
-  
-  const Title = styled.h1`
+    `;
+    
+    const Title = styled.h1`
     font-size: 2rem;
     color: #000B58;
     margin-bottom: 1rem;
-  
+    margin-top: 1.5rem;
+    color: #000;
+    font-weight: 100;
     @media (min-width: 768px) {
       font-size: 2.5rem;
-    }
-  `;
-  
-  const Description = styled.p`
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+      }
+      `;
+      const Space = styled.h1`
+      color:7b3f00;
+      
+      `
+      const Description = styled.p`
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
   `;
   
   const ServiceSelector = styled.div`
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    width: 70%;
+    height:50px;
+    border-radius:14px;
+    background-color: ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   
     select, button {
-      padding: 0.8rem;
-      font-size: 1rem;
+      padding: 1rem;
+      font-size: 0.85rem;
       margin: 0.5rem 0;
-      border-radius: 8px;
+      border-radius: 14px;
       border: none;
     }
   
