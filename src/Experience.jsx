@@ -98,8 +98,11 @@ const CardContainer = styled.div`
 
 const Card = styled.div`
   background-color: #ffffff;
-  width: 200px;
-  padding: 20px;
+  width: 260px;
+  height: 250px;
+  padding: 30px 10px;
+  margin-left: 10px;
+  margin-bottom: 18px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -113,7 +116,7 @@ const Card = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  font-size: 2em;
+  font-size: 3.6em;
   color: #f5bd41;
   margin-bottom: 15px;
 `;
@@ -134,9 +137,9 @@ const Description = styled.p`
 const ActionButton = styled.button`
   background-color: #003161;
   color: #ffffff;
-  padding: 12px 24px;
+  padding: 13px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
   margin-top: 30px;
