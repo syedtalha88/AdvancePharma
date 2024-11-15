@@ -59,8 +59,9 @@ export default ExceptionalCare;
 const Container = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 50px;
+  justify-content: space-between;
+  padding: 0 120px;
+  height:100vh;
   background-color: #f9f4ed; /* Background matching theme */
 `;
 
@@ -70,14 +71,15 @@ const ImageContainer = styled.div`
 `;
 
 const MainImage = styled.img`
-  width: 100%;
+  width: 80%;
+  height: 450px;
   border-radius: 10px;
 `;
 
 const OverlayImageContainer = styled.div`
   position: absolute;
-  bottom: -20px;
-  left: 10%;
+  bottom: 10px;
+  left: 61%;
   width: 150px;
   height: 150px;
   background: #fff;
@@ -95,7 +97,8 @@ const OverlayImage = styled.img`
 `;
 
 const Content = styled.div`
-  width: 50%;
+  width: 40%;
+  
 `;
 
 const SmallTitle = styled.h5`
@@ -107,12 +110,14 @@ const SmallTitle = styled.h5`
 
 const Title = styled.h2`
   font-size: 2em;
-  color: #3d4b70;
+  color: #000;
   margin: 0;
+  font-family: "Poppins", serif;
+  font-weight: 600;
 `;
 
 const Line = styled.div`
-  width: 60px;
+  width: 190px;
   height: 3px;
   background-color: #f5bd41;
   margin: 20px 0;
@@ -131,7 +136,7 @@ const ListItem = styled.li`
 `;
 
 const IconWrapper = styled.div`
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #f5bd41;
   margin-right: 15px;
 `;
@@ -142,9 +147,10 @@ const TextWrapper = styled.div`
 
 const ItemTitle = styled.h3`
   font-size: 1.1em;
-  color: #3d4b70;
+  color: #000;
   margin: 0 0 5px 0;
-  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-weight: 400;
 `;
 
 const Description = styled.p`
@@ -158,7 +164,7 @@ const ActionButton = styled.button`
   color: #ffffff;
   padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 1em;
   cursor: pointer;
   margin-top: 20px;
