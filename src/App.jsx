@@ -2,6 +2,9 @@ import TopHeader from "./TopHeader";
 import Header from "./Header";
 import GlobalStyle from "./GlobalStyle";
 import HeroSection from "./HeroSection";
+import OurTrust from "./OurTrust";
+import Experience from "./Experience";
+import Care from "./Care";
 const App = () => {
   return (
     <>
@@ -9,6 +12,9 @@ const App = () => {
       <TopHeader/>
       <Header/>
       <HeroSection/>
+      <OurTrust/>
+      <Experience/>
+      <Care/>
     </>
   );
 };
