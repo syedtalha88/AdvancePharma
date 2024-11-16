@@ -1,5 +1,4 @@
 import  { useState } from "react";
-import logo from "./assets/logo.jpg";
 import "./header.css";
 
 const Header = () => {
@@ -13,7 +12,6 @@ const Header = () => {
     <header className="header-container">
       {/* Left Section: Logo and Company Name */}
       <div className="left-section">
-        <img src={logo} alt="Company Logo" className="logo" />
         <span className="company-name">Advance Pharma</span>
       </div>
 

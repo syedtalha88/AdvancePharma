@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 import { FaTooth, FaHandsHelping, FaUserMd } from 'react-icons/fa'; // Example icons
 
-import mainImage from './assets/pic1.jpg'; // Main image path
-import overlayImage from './assets/pic1.jpg'; // Overlay image path
+import mainImage from './assets/pics (3).jpg'; // Main image path
+import overlayImage from './assets/pics (4).jpg'; // Overlay image path
 
 const ExceptionalCare = () => {
   return (

@@ -53,7 +53,7 @@ const TextContent = styled.div`
   padding: 4rem;
   width: 30%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 868px) {
     width: 100%;
     padding: 2rem;
   }
@@ -66,7 +66,7 @@ const Subtitle = styled.h2`
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 868px) {
     font-size: 0.7rem;
   }
 `;
@@ -79,7 +79,7 @@ const Title = styled.h1`
   color: #000;
   font-weight: 100;
 
-  @media (max-width: 768px) {
+  @media (max-width: 868px) {
     font-size: 1.8rem;
   }
 
@@ -94,7 +94,7 @@ const Space = styled.div`
   background-color: #7b3f00;
   margin: 20px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 868px) {
     width: 150px;
   }
 `;
@@ -140,7 +140,7 @@ const ServiceSelector = styled.div`
       }
       }
       
-      @media (max-width: 768px) {
+      @media (max-width: 868px) {
         width: 100%;
         box-shadow: none;
   }
