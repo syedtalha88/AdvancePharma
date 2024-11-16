@@ -1,104 +1,98 @@
+import  { useState } from 'react';
 
 const TopHeader = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
     <div style={styles.headerWrapper}>
-    <div style={styles.headerContainer}>
-      {/* Left Side: Location */}
-      <div style={styles.location}>
-        <span>📍 Im Prüfling 17 - 19, 60389 Frankfurt am Main</span>
-      </div>
+      <div
+        style={{
+          ...styles.scrollingContainer,
+          animationPlayState: isHovered ? 'paused' : 'running',
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Left Side: Location */}
+        <div style={styles.scrollingItem}>📍 Im Prüfling 17 - 19, 60389 Frankfurt am Main</div>
 
-      {/* Right Side: Contact Details */}
-      <div style={styles.contactDetails}>
-        <span style={styles.contactItem}>📞 069 9563669-0</span>
-        <span style={styles.contactItem}>✉️ info@groisman-laube.de</span>
-        <button style={styles.messageButton}>Send a Message</button>
+        {/* Right Side: Contact Details */}
+        <div style={styles.scrollingItem}>📞 069 9563669-0</div>
+        <div style={styles.scrollingItem}>✉️ info@groisman-laube.de</div>
       </div>
-    </div>
+      <button style={styles.messageButton}>Send a Message</button>
     </div>
   );
 };
 
-
 const styles = {
-
-  headerWrapper:{
-    backgroundColor:'#F7EED3',
-  },
-
-  headerContainer: {
-    position: 'relative',
+  headerWrapper: {
+    backgroundColor: '#F7EED3',
+    overflow: 'hidden', // Prevents content from overflowing
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '5px 20px',
-    backgroundColor: '#2A2D34', // Dark blue background to match the uploaded theme
-    color: '#E0E0E0', // Light gray text color for contrast
-    fontSize: '14px',
-    fontFamily: 'Arial, sans-serif',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
-    margin:' 0 20px',
-    // marginTop:'10px',
-    borderBottomLeftRadius:"40px",
-    borderBottomRightRadius:"40px"
   },
-  location: {
-    flex: 1,
-    color: '#E0E0E0',
-    textAlign: 'left',
-  },
-  contactDetails: {
+  scrollingContainer: {
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    flex: 2,
-    justifyContent: 'flex-end',
-    flexWrap: 'wrap',
+    whiteSpace: 'nowrap', // Prevent wrapping of content
+    overflow: 'hidden',
+    animation: 'scrolling 15s linear infinite', // Infinite horizontal scrolling animation
+    fontSize: '16px',
+    fontFamily: 'Arial, sans-serif',
   },
-  contactItem: {
+  scrollingItem: {
+    flex: 'none', // Prevent items from shrinking
     marginRight: '20px',
-    color: '#E0E0E0', // Light text color for contact details
+    color: '#2A2D34',
   },
   messageButton: {
-    padding: '6px 12px',
-    backgroundColor: '#1F3A93', // Darker blue for the button
-    color: '#E0E0E0', // Light text color
+    padding: '8px 16px',
+    backgroundColor: '#1F3A93',
+    color: '#E0E0E0',
     border: 'none',
-    borderRadius: '20px', // Rounded button for a modern look
+    borderRadius: '20px',
     cursor: 'pointer',
     fontSize: '14px',
     transition: 'background-color 0.3s ease',
   },
-
-  // Adding a custom wave shape using ::before
-  '::before': {
-    content: '""',
-    position: 'absolute',
-    bottom: '-10px', // Position slightly below the container
-    left: '0',
-    width: '100%',
-    height: '40px', // Adjust height as needed
-    backgroundColor: '#2A2D34', // Same color as the header for continuity
-    borderRadius: '0 0 50% 50%', // Create a wave effect
-    zIndex: '-1',
+  '@keyframes scrolling': {
+    from: {
+      transform: 'translateX(100%)',
+    },
+    to: {
+      transform: 'translateX(-100%)',
+    },
   },
-
+  '@media (min-width: 768px)': {
+    scrollingContainer: {
+      animation: 'none', // Disable scrolling for larger screens
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      padding: '10px 20px',
+    },
+    scrollingItem: {
+      marginBottom: '0',
+      marginRight: '15px',
+    },
+  },
   '@media (max-width: 768px)': {
-    headerContainer: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
+    scrollingContainer: {
+      animation: 'scrolling 15s linear infinite',
     },
-    contactDetails: {
-      justifyContent: 'center',
-      marginTop: '10px',
-    },
-    contactItem: {
-      marginRight: '10px',
+    scrollingItem: {
+      fontSize: '14px',
     },
     messageButton: {
-      fontSize: '13px',
-      padding: '5px 10px',
+      padding: '6px 12px',
+      fontSize: '12px',
     },
   },
 };
