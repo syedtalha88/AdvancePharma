@@ -1,5 +1,4 @@
 {
-  "homepage": "https://syedtalha88.github.io/AdvancePharma",
   "name": "bpharma",
   "homepage": "https://syedtalha88.github.io/AdvancePharma",
   "private": true,
@@ -10,12 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-<<<<<<< HEAD
     "deploy": "gh-pages -d dist"
-=======
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
->>>>>>> 3890473766bc8a2b1b8f71c10a3941072788b4f8
   },
   "dependencies": {
     "react": "^18.3.1",
