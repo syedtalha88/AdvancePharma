@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
   "homepage": "https://syedtalha88.github.io/AdvancePharma/",
+=======
+>>>>>>> 2328a72622766dfe553ca1f4a5b137c13e5d7cd0
   "name": "bpharma",
+  "homepage": "https://syedtalha88.github.io/AdvancePharma",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +13,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+<<<<<<< HEAD
     "predeploy": "npm run build",
+=======
+>>>>>>> 2328a72622766dfe553ca1f4a5b137c13e5d7cd0
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
