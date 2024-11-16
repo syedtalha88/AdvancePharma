@@ -1,6 +1,6 @@
 // src/App.js
 import styled, { keyframes } from 'styled-components';
-import { FaTooth, FaMoneyCheckAlt, FaUserFriends, FaLaptopMedical } from 'react-icons/fa'; // Example icons
+import { FaTooth, FaMoneyCheckAlt, FaUserFriends, FaLaptopMedical } from 'react-icons/fa';
 
 const Experience = () => {
   return (
@@ -62,6 +62,10 @@ const Container = styled.div`
   padding: 50px;
   background-color: #f9f4ed;
   color: #3d4b70;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
 `;
 
 const Header = styled.h5`
@@ -78,6 +82,10 @@ const Title = styled.h2`
   margin: 0;
   color: #3d4b70;
   animation: ${fadeIn} 1.2s ease;
+
+  @media (max-width: 768px) {
+    font-size: 1.8em;
+  }
 `;
 
 const Line = styled.div`
@@ -94,6 +102,10 @@ const CardContainer = styled.div`
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 30px;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 `;
 
 const Card = styled.div`
@@ -101,17 +113,25 @@ const Card = styled.div`
   width: 260px;
   height: 250px;
   padding: 30px 10px;
-  margin-left: 10px;
-  margin-bottom: 18px;
+  margin: 0 10px 18px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: ${fadeIn} 1s ease;
-  
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    width: 40%; /* Take up most of the screen on smaller devices */
+    height: 200px;
+  }
+  @media (max-width: 500px) {
+    width: 80%; /* Take up most of the screen on smaller devices */
+    height: 200px;
   }
 `;
 
@@ -119,6 +139,10 @@ const IconWrapper = styled.div`
   font-size: 3.6em;
   color: #f5bd41;
   margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 3em; /* Slightly smaller icons for tablets and mobile */
+  }
 `;
 
 const CardTitle = styled.h3`
@@ -126,12 +150,20 @@ const CardTitle = styled.h3`
   color: #3d4b70;
   font-weight: 600;
   margin: 10px 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.1em; /* Slightly smaller title for smaller devices */
+  }
 `;
 
 const Description = styled.p`
   font-size: 0.9em;
   color: #6c757d;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.85em; /* Smaller description text for smaller devices */
+  }
 `;
 
 const ActionButton = styled.button`
@@ -149,5 +181,10 @@ const ActionButton = styled.button`
   &:hover {
     background-color: #006a67;
     transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 0.9em; /* Smaller button size for smaller devices */
   }
 `;
